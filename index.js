@@ -5,9 +5,16 @@ import request from "superagent";
 const app = express();
 const port = 3000;
 
-app.get('/', async (req, res) => {
-  
+app.get('/alert', async (req, res) => {
+  console.log('alert')
+  res.send('alert') 
 });
+
+app.get('/ok', async (req, res) => {
+  console.log('ok')
+  res.send('ok') 
+});
+
 
 // Check if devices have been paired, and if not pair them.
 const pairDevices = (start) => {
